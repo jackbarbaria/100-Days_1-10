@@ -1,6 +1,7 @@
 # Day 1 - Working with Variables in Python
 
-Band Name Generator Project
+## Band Name Generator Project
+
 Please check out my Band Name Generator project, using what I learned on Day 1. </br>
 [Band Name Generator](https://replit.com/@JackBarbaria/Day1BandNameGenerator?v=1)
 
