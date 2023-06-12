@@ -12,3 +12,22 @@ pet_name = input("What is the name of a pet that you like? ")
 print("Here is the name of your band: \n" + user_city + " " + pet_name)
 ```
 Day 1 was all about learning how to use the print, len, and input functions. I also learned how to manipulate strings, and how to create variables in Python. 
+
+# Day 1 - Data Types and Manipulating Strings
+
+## Tip Calculator Project
+
+Check out the Tip Calculator project I created using the concepts I learned during Day 2. I learned about different data types and how to convert between them. I also learned how to manipulate strings and numbers. 
+
+[Tip Calculator](https://replit.com/@JackBarbaria/Day-2-Tip-Calculator?v=1)
+
+```python
+print("Welcome to Jazzy Jack's tip calculator.\nFor those of us who are math challenged, this is the tool for you!")
+total_bill = input("What is the total bill? $")
+tip_percentage = input("What percentage tip would you like to give? 12, 15, 20, etc? ")
+no_people = input("How many people to split the bill? ")
+tipsy = "1." + tip_percentage
+tipsy = float(tipsy)
+split = (float(total_bill) * tipsy)/float(no_people)
+print(f"Each person should pay: ${split:.2f}")
+```
