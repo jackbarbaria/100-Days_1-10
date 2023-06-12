@@ -13,7 +13,7 @@ print("Here is the name of your band: \n" + user_city + " " + pet_name)
 ```
 Day 1 was all about learning how to use the print, len, and input functions. I also learned how to manipulate strings, and how to create variables in Python. 
 
-# Day 1 - Data Types and Manipulating Strings
+# Day 2 - Data Types and Manipulating Strings
 
 ## Tip Calculator Project
 
