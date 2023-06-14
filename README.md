@@ -34,8 +34,9 @@ print(f"Each person should pay: ${split:.2f}")
 
 
 # Day 3 - Control Flow and Logical Operators
-
+## Choose Your Own Adventure
 Check out my choose your own adventure game written using what I learned during Day 3!
+
 [Treasure Island - Choose Your Own Adventure](https://replit.com/@JackBarbaria/Day-3-treasure-island?v=1)
 
 ```python
