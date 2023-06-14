@@ -90,3 +90,79 @@ else:
     else:
       print("\n\nThe door opens smoothly and before you is an open chest, overflowing with gold and jewels. Congratulations! You have found the treasure and won the game!!")
 ```
+
+# Day 4 - Randomization and Python Lists
+## Rock Paper Scissors
+The Day 4 challenge. Who will win... you or the computer, in this no holds barred, winner takes all, rock/paper/scissors game?!
+
+[Rock, Paper, Scissors Game!](https://replit.com/@JackBarbaria/Day-4-rock-paper-scissors?v=1)
+
+```python
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+pic = [rock, paper, scissors]
+
+players_choice = int(input("What do you choose? Type 1 for Rock, 2 for Paper, or 3 for Scissors.\n"))-1
+
+if players_choice != 0 and players_choice != 1 and players_choice != 2:
+  print("That is an invalid choice. You've lost before you even started.")
+else:
+  print(pic[players_choice])
+
+# Computer choses randomly:  
+  print("Computer chose:")
+  computers_choice = random.randint(0, 2)
+  print(pic[computers_choice])
+
+# player chose rock
+  if players_choice == 0 and computers_choice == 0:
+    print("You are equally matched as this challenge ends in a draw.")
+  elif players_choice == 0 and computers_choice == 1:
+    print("Hang you head in shame as you have been defeated by the computer!")
+  elif players_choice == 0 and computers_choice == 2:
+    print("Victory is yours!!!")
+
+# player chose paper
+  elif players_choice == 1 and computers_choice == 0:
+    print("You have chosen wisely and crushed your opponent!")
+  elif players_choice == 1 and computers_choice == 1:
+    print("Alas, it is a stalement... this time.")
+  elif players_choice == 1 and computers_choice == 2:
+    print("You have chosen poorly and have brought dishonor to your family.")
+
+# player chose scissors
+  elif players_choice == 2 and computers_choice == 0:
+    print("You've lost. Walk away tall.")
+  elif players_choice == 2 and computers_choice == 1:
+    print("Winner, winner, chicken dinner!!")
+  elif players_choice == 2 and computers_choice == 2:
+    print("It's a tie. Can you believe it?")
+```
