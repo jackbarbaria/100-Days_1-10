@@ -31,3 +31,60 @@ tipsy = float(tipsy)
 split = (float(total_bill) * tipsy)/float(no_people)
 print(f"Each person should pay: ${split:.2f}")
 ```
+
+
+# Day 3 - Control Flow and Logical Operators
+
+Check out my adventure game below written using what I learned during Day 3!
+
+```python
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.\n\n") 
+
+#first choice "The Road"
+print("Before you is a cobblestone road. To the left the road looks rough and worn and leads towards the sea. To the right the road looks less traveled, and leads towards a dark wooded area.\n\n")
+the_road = input("Do you go left or right? L or R? ")
+if the_road == "R":
+  print('You travel along the road into the dark woods. The ominous screech of an owl startles you as you trip over a loose cobblestone. "Hoot... hoot" is the last thing you hear as you lose conciousness from the hard impact of the ground.\n\nGame over.')
+
+#second choice "The Beach"
+else:
+  print("You travel along the road towards the sea. The sound of the surf sooths your ears and the smell of the salt water brightens yor spirits. As you reach the shore, you can clearly see an island not far off, maybe 300-400 yards away. It doesn't seem too far away to swim. Though it may be better to wait for a boat\n\n")
+  the_beach = input("Do you swim to the island or wait for a boat? Type 'S' for swim or 'W' for wait: ")
+  if the_beach == "S":
+    print("You jump into the water and start swimming towards the island. After just a few strokes in, you feel a sharp pain. A jellyfish has stung you in the back and you can't feel your legs. As the waves push you back to the shore, all you can do is fight to keep your head above the water.\n\nGame over.")
+
+  #third choice "The Door"
+  else:
+    print('You wait about 5 minutes and before long an old man in a small dingy rows up to you and offers to take you to the island. "Ah! Another treasure hunter, I see," the old man rasps. "I take suckers like you across and not a one has returned unscathed. But since you insist..."\n\n')
+    print("Before long, you have reached the island. The old man bids you adieu. On the island you see one lonely building with three doors. Red, Yellow, and Blue.") 
+    the_door = input("Which door will you open? Type 'R' for Red, 'Y' for Yellow, and 'B' for Blue: ")
+    if the_door == "R" or the_door == "B":
+      print("You open the door and an irrestible force pulls you into it's gaping maw. You see nothing but darkness.\n\nGame over.")
+
+    #Winner!!
+    else:
+      print("\n\nThe door opens smoothly and before you is an open chest, overflowing with gold and jewels. Congratulations! You have found the treasure and won the game!!")
+```
