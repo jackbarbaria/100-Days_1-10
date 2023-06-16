@@ -1,6 +1,9 @@
-# Day 1 - Working with Variables in Python
+# 100 Days of Code: Days 1 - 10
+I've been learning Python through the [100 Days of Code: The Complete Python Pro Bootcamp for 2023](https://www.udemy.com/course/100-days-of-code/) course on Udemy. This course by [Dr. Angela Yu](https://www.udemy.com/user/4b4368a3-b5c8-4529-aa65-2056ec31f37e/) contains a daily collection of video lessons that include smaller coding challenges, where concepts are introduced. At the end of each day, you are challenged with a more difficult Final Project where you bring together all you learned in previous the lessons. I am documenting here the code I've written for each of these daily Final Projects.
 
-## Band Name Generator Project
+## Day 1 - Working with Variables in Python
+
+### Band Name Generator Project
 
 Please check out my Band Name Generator project, using what I learned on Day 1. </br>
 [Band Name Generator](https://replit.com/@JackBarbaria/Day1BandNameGenerator?v=1)
@@ -13,9 +16,9 @@ print("Here is the name of your band: \n" + user_city + " " + pet_name)
 ```
 Day 1 was all about learning how to use the print, len, and input functions. I also learned how to manipulate strings, and how to create variables in Python. 
 
-# Day 2 - Data Types and Manipulating Strings
+## Day 2 - Data Types and Manipulating Strings
 
-## Tip Calculator Project
+### Tip Calculator Project
 
 Check out the Tip Calculator project I created using the concepts I learned during Day 2. I learned about different data types and how to convert between them. I also learned how to manipulate strings and numbers. 
 
@@ -33,8 +36,8 @@ print(f"Each person should pay: ${split:.2f}")
 ```
 
 
-# Day 3 - Control Flow and Logical Operators
-## Choose Your Own Adventure
+## Day 3 - Control Flow and Logical Operators
+### Choose Your Own Adventure
 Check out my choose your own adventure game written using what I learned during Day 3!
 
 [Treasure Island - Choose Your Own Adventure](https://replit.com/@JackBarbaria/Day-3-treasure-island?v=1)
@@ -91,8 +94,8 @@ else:
       print("\n\nThe door opens smoothly and before you is an open chest, overflowing with gold and jewels. Congratulations! You have found the treasure and won the game!!")
 ```
 
-# Day 4 - Randomization and Python Lists
-## Rock Paper Scissors
+## Day 4 - Randomization and Python Lists
+### Rock Paper Scissors
 The Day 4 challenge. Who will win... you or the computer, in this no holds barred, winner takes all, rock/paper/scissors game?!
 
 [Rock, Paper, Scissors Game!](https://replit.com/@JackBarbaria/Day-4-rock-paper-scissors?v=1)
@@ -165,4 +168,62 @@ else:
     print("Winner, winner, chicken dinner!!")
   elif players_choice == 2 and computers_choice == 2:
     print("It's a tie. Can you believe it?")
+```
+
+
+## Day 5 - Python Loops, Range, and Code Blocks
+### Password Generator
+The Day 5 final challenge stretched me to the limit. It was fun to watch the instructor's solution after I had written my version and see how Dr. Yu solved this challenge in about half the lines of code that I had written. I'm still excited that I got there at the end. 
+
+[Password Generator](https://replit.com/@JackBarbaria/Day-5-password-generator?v=1)
+
+```python
+#Password Generator Project
+import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+print("Welcome to the PyPassword Generator!\n")
+nr_letters= int(input("How many letters would you like in your password?\n")) 
+nr_symbols = int(input(f"How many symbols would you like?\n"))
+nr_numbers = int(input(f"How many numbers would you like?\n"))
+
+# generating random letters
+let_result = ''
+for letter in range(0, (nr_letters)):
+  L = random.randint(0, 41)
+  let_result += letters[L]
+
+# generating random number
+num_result = ''
+for number in range(0, (nr_numbers)):
+  X = random.randint(0, 9)
+  num_result += numbers[X]
+
+# generating random symbols
+sym_result = ''
+for number in range(0, (nr_symbols)):
+  S = random.randint(0, 8)
+  sym_result += symbols[S]
+
+# combining the results into one string
+combined = let_result + num_result + sym_result
+
+num_of_char = len(combined)
+
+# converting the string to a list
+rando_list = []
+for app in range(0, (num_of_char)):
+  rando_list.append(combined[app])
+
+# randomizing the order of the list
+random.shuffle(rando_list)
+
+# converting the shuffled list back to a string
+rando_password = ''
+for app2 in range(0, (num_of_char)):
+  rando_password += rando_list[app2]
+
+print(f"\nYour password is {rando_password}")
 ```
