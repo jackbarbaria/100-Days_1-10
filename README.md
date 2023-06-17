@@ -227,3 +227,12 @@ for app2 in range(0, (num_of_char)):
 
 print(f"\nYour password is {rando_password}")
 ```
+
+
+## Day 6 - Python Functions
+### Reeborg's Maze 
+The Day 6 lesson focused on how to define your own functions. It also introduced the **while** loop and highlighted the differences between **while** and **for** loops. Today's challenges intruduced me to [Reeborg's World](https://reeborg.ca/index_en.html). At Reeborg's World you use Python to automate the actions of a robot in order to complete a task. In the final challenge of the day, Reeborg is placed in a randomly generated maze, facing in a random direction, and the goal is to guide Reeborg out of the maze. This was a difficult challenge for me, as there were certain conditions that would occur that would cause Reeborg to walk in a circle in an infinite loop. After I slept on on it, I realized I could track the number of turns Reeborg makes and force him to do something different, avoiding the loop.
+
+<br />
+<img src="https://i.imgur.com/Ri6DX4v.jpg" height="80%" width="80%" alt="Reeborg's Maze"/>
+<br />
