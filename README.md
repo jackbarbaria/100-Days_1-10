@@ -236,3 +236,22 @@ The Day 6 lesson focused on how to define your own functions. It also introduced
 <br />
 <img src="https://i.imgur.com/Ri6DX4v.jpg" height="80%" width="80%" alt="Reeborg's Maze"/>
 <br />
+
+## Day 7 - Hangman
+
+Day 7 was entirely devoted to making a **hangman** game. Check out my version of the game here: [Hangman](https://replit.com/@JackBarbaria/Day-7-Hangman-Project?v=1).
+
+<br />
+<img src="https://i.imgur.com/wpHw6n1.png" height="40%" width="40%" alt="Hangman"/>
+<br />
+
+Today's lesson encouraged me to create a flowchart to break down the game of **hangman** into its indivdual components. This flowchart would become the blueprint for designing the game. Then with the help of the Day 7 challenges, writing the game was broken down into 5 steps: 
+1. Picking a word and checking the user's answer.
+2. Display blanks for each letter of the word and replacing the blanks with guesses.
+3. Checking if the player has won.
+4. Keeping track of the player's lives.
+5. Improving the user's experience.
+
+I added a couple features that were not in the original guide. I wanted to add some sort of input validation, as I noticed the game would break if I accidently typed two letters for my guess. So, I created a list that included all the capital and lower case letters of the alphabet and the game now checks to see if the input matches this list. If the player's accidently types in "aa" it will not match the validation list and the player will be asked to try again. I also had the program, track previous guesses so if the player picked the same letter twice, they would be asked to chose another letter.
+
+The provided word list is challenging as it only provides the player with a single word to guess. I find it's easier to play **hangman** if you can pick a category (like Movies, or Phrases) and then have a puzzle with multiple words. While I was able to expirement with a list of movie titles, I was having trouble altering the program to allowing the player to choose from multiple puzzle categories. I'll come back this later, after I have learned more Python.
