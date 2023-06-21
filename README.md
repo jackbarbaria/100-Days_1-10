@@ -255,3 +255,48 @@ Today's lesson encouraged me to create a flowchart to break down the game of **h
 I added a couple features that were not in the original guide. I wanted to add some sort of input validation, as I noticed the game would break if I accidently typed two letters for my guess. So, I created a list that included all the capital and lower case letters of the alphabet and the game now checks to see if the input matches this list. If the player's accidently types in "aa" it will not match the validation list and the player will be asked to try again. I also had the program, track previous guesses so if the player picked the same letter twice, they would be asked to chose another letter.
 
 The provided word list is challenging as it only provides the player with a single word to guess. I find it's easier to play **hangman** if you can pick a category (like Movies, or Phrases) and then have a puzzle with multiple words. While I was able to expirement with a list of movie titles, I was having trouble altering the program to allowing the player to choose from multiple puzzle categories. I'll come back this later, after I have learned more Python.
+
+## Day 8 - Function Parameters
+### Caesar Cypher Project
+
+Today, I learned how to add parameters and how to pass arguments into functions. This helped me complete the Day 8 challenge to create a program that allows the user to encode and decode messages using a Caesar, or shift cypher.
+
+[Caesar Cypher Program](https://replit.com/@JackBarbaria/Day-8-Caesar-Cypher?v=1)
+
+```python
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+def caesar(code_text, shift_amount, cypher_direction):
+  scrambled_text = ""
+  if cypher_direction == "decode":
+    shift_amount *= -1
+  for letter in code_text:
+    if letter not in alphabet:
+      new_letter = letter
+    else:
+      original_index = alphabet.index(letter)
+      new_index = original_index + shift_amount
+      if new_index < 0:
+        new_index += 26
+      elif new_index > 25:
+        new_index -= 26 
+      new_letter = alphabet[new_index]
+    scrambled_text += new_letter
+  print(f"The {cypher_direction}d text is {scrambled_text}")
+
+import art
+print(art.logo) 
+
+Start = True
+while Start:
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+  text = input("Type your message:\n").lower()
+  shift = (int(input("Type the shift number:\n"))) % 26
+
+  caesar(code_text=text, shift_amount=shift, cypher_direction=direction)
+  go_again = input('Type "yes" if you want to go again. Otherwise type "no".\n')
+  if go_again == "no":
+    Start = False
+
+print("Goodbye")
+```
