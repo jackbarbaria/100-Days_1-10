@@ -300,3 +300,50 @@ while Start:
 
 print("Goodbye")
 ```
+
+## Day 9 - Dictionaries and Nesting
+### Secret Auction Project
+
+Day 9 was focused on Dictionaries and how to nest dictionaries within lists and lists within dictionaries, and even dictionaries within dictionaries. It was wild!! I followed along and built a Secret or Blind Auction program. It always fascinates me to see the differences in the code in my version of program versus the solution presented by the instructor. 
+
+Check out my [Secret Auction Program](https://replit.com/@JackBarbaria/Day-9-Blind-Auction?v=1)
+
+```python
+from replit import clear
+import art
+
+bid_list = []
+def add_bid_info(new_name, new_amount):
+  new_bidder = {}
+  new_bidder["name"] = new_name
+  new_bidder["amount"] = new_amount
+  bid_list.append(new_bidder)
+
+more = True
+while more == True:
+  print(art.logo)
+  print("Welcome to the secret auction program.")
+  bid_name = input("What is your name?: ")
+  bid_amount = int(input("What's your bid?: $"))
+
+  add_bid_info(new_name=bid_name, new_amount=bid_amount)
+  
+  more_bidders = input("\nAre there any other bidders? Type 'yes' or 'no'.\n")
+  if more_bidders == "no":
+    more = False
+  else:
+    clear()
+
+highbidder = ""
+highbid = 0
+for bid in bid_list:
+  dolla = bid["amount"]
+  namo = bid["name"]
+  if dolla > highbid:
+    highbid = dolla
+    highbidder = namo
+
+clear()
+print(art.celebration)
+print(f"The winner is {highbidder} with a bid of ${highbid}")
+```
