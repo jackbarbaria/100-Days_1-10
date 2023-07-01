@@ -347,3 +347,65 @@ clear()
 print(art.celebration)
 print(f"The winner is {highbidder} with a bid of ${highbid}")
 ```
+## Day 10 - Functions with Output
+### Calculator Project
+
+Today I learned to create functions with outputs using the **return** statement. When you define a function, you can use the **return** statement to give back a value or result to other parts of the program that called them.
+
+In todays program, I defined **add**, **subtract**, **multiply**, and **divide** functions, and used the return statement within the functions in order to return the results of these operations later in the program.
+
+Check out my [Calculator](https://replit.com/@JackBarbaria/Day-10-Calculator?v=1)
+
+```python
+from art import logo
+from replit import clear
+
+#Calculator
+
+#Add
+def add(n1, n2):
+  return n1 + n2
+
+#Subtract
+def subtract(n1, n2):
+  return n1 - n2
+
+#Multiply
+def multiply(n1, n2):
+  return n1 * n2
+
+#Divide
+def divide(n1, n2):
+  return n1 / n2
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide,
+}
+
+turns = 1
+answer = 0
+while turns >= 1:
+  if turns == 1:
+    print(logo)
+    num1 = float(input("What's the first number?: "))
+    turns += 1
+  else:
+    num1 = answer
+
+  for symbol in operations:
+    print(symbol)
+  operation_symbol = input("Pick an operation: ")
+  num2 = float(input("What's the next number?: "))
+  calculation_function = operations[operation_symbol]
+  answer = calculation_function(n1=num1, n2=num2)
+  
+  print(f"{num1} {operation_symbol} {num2} = {answer}")
+  another_calc = input(f"Type 'y' to continue to calculating with {answer}, or type 'n' to start a new calculation.: ")
+  if another_calc == "n":
+    turns = 1
+    clear()
+  
+```
